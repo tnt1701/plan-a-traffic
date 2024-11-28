@@ -7,24 +7,25 @@ This Laravel application provides a console command to check the current carbon 
 Follow these steps to install and set up the Carbon Intensity Checker in your Laravel application.
 
 1. Clone the Repository
-2. Install Dependencies
-```php
-composer install
-```
-3. Set Up Environment Variables
+
+2. Set Up Environment Variables
 ```php
 cp .env.example .env
 ```
-Then, generate an application key:
-```php
-php artisan key:generate
-```
-4. Configure API Credentials
+3. Configure API Credentials
 The application uses the Electricity Maps API to fetch carbon intensity data.
 Add the following variables to your .env file:
 ```php
 ELECTRICITY_MAPS_BASE_URL="https://api.electricitymap.org"
 ELECTRICITY_MAPS_API_TOKEN="your_api_token_here"
+```
+4. Install Dependencies
+```php
+composer install
+```
+Then, generate an application key:
+```php
+php artisan key:generate
 ```
 5. Update Configuration
 Ensure that the config/services.php file includes the Electricity Maps configuration:
