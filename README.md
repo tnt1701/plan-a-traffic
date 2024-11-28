@@ -24,14 +24,14 @@ The application uses the Electricity Maps API to fetch carbon intensity data.
 Add the following variables to your .env file:
 ```php
 ELECTRICITY_MAPS_BASE_URL=https://api.electricitymaps.com
-ELECTRICITY_MAPS_TOKEN=your_api_token_here
+ELECTRICITY_MAPS_API_TOKEN=your_api_token_here
 ```
 5. Update Configuration
 Ensure that the config/services.php file includes the Electricity Maps configuration:
 ```php
-'electricity_maps' => [
-    'base_url' => env('ELECTRICITY_MAPS_BASE_URL', 'https://api.electricitymaps.com'),
-    'token' => env('ELECTRICITY_MAPS_TOKEN'),
+'electricity_maps' =>  [
+    'token' => env('ELECTRICITY_MAPS_API_TOKEN'),
+    'base_url' => env('ELECTRICITY_MAPS_BASE_URL'),
 ]
 ```
 ## Usage
